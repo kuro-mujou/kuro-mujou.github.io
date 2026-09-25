@@ -50,13 +50,13 @@
 
   <header>
     <h1>Privacy Policy — Morph Launcher</h1>
-    <p class="meta">Package <span class="pkg">inkspire.morph.launcher</span> · Effective 23 September 2026</p>
+    <p class="meta">Package <span class="pkg">inkspire.morph.launcher</span> · Effective 25 September 2026</p>
   </header>
 
   <div class="lede">
-    <p>Morph Launcher collects nothing about you. It has no account, no server, no ads, no analytics and no crash reporting. The one thing that involves another company is Morph Premium, the optional subscription: Google Play handles it, and Google Play's billing library talks to Google.</p>
+    <p>Morph Launcher collects nothing about you. It has no account, no server, no ads, no analytics and no crash reporting. Two things involve another company: Morph Premium, the optional subscription, which Google Play handles; and weather widgets, which ask MET Norway for a forecast.</p>
   </div>
-  <p>Everything below describes what the app reads on your device, and why. None of it leaves your device, apart from what the Morph Premium section describes.</p>
+  <p>Everything below describes what the app reads on your device, and why. None of it leaves your device, apart from what the Morph Premium and Weather sections describe.</p>
 
   <h2>What the app accesses on your device</h2>
 
@@ -71,6 +71,15 @@
 
   <h3>Capturing your wallpaper</h3>
   <p>The wallpaper capture feature takes one picture of your screen, with the launcher's own interface hidden, so its effects can match a wallpaper the app cannot otherwise read (such as a live wallpaper). It only starts after you allow it in Android's screen-sharing dialog, it stops as soon as that one picture is taken, and the picture is kept in the app's private storage on the device. It is never saved to your gallery and never leaves the device. Android requires a short-lived foreground service for this (FOREGROUND_SERVICE_MEDIA_PROJECTION).</p>
+
+  <h3>Your calendar (calendar widgets)</h3>
+  <p>READ_CALENDAR lets a calendar widget show your upcoming events. It is asked for only when you tap a calendar widget to connect it; until then the widget shows made-up sample events. Your events are read on the device to draw the widget and never leave it.</p>
+
+  <h3>Notifications and music (notification and music widgets)</h3>
+  <p>Showing what is playing, and counting the notifications waiting, needs the launcher to be allowed as a notification listener, which you switch on yourself in Android's settings when you tap such a widget to connect it. The launcher uses this to read which apps have notifications and how many, and the title, artist, album and cover of what is playing. It does not read what your notifications say. Nothing it reads leaves the device.</p>
+
+  <h3>Your location (weather widgets)</h3>
+  <p>ACCESS_COARSE_LOCATION lets a weather widget show the weather where you are. It is asked for only when you tap a weather widget set to this phone's location to connect it, and a widget set to a town you choose needs no location at all. The location is approximate and rounded to about a kilometre before it is used; see the Weather section for where it is sent.</p>
 
   <h3>Setting your wallpaper</h3>
   <p>SET_WALLPAPER lets the app apply a wallpaper you have chosen. It is used for nothing else.</p>
@@ -87,6 +96,15 @@
     <li><strong>Canceling.</strong> You can cancel at any time in Google Play's subscription settings.</li>
   </ul>
 
+  <h2>Weather forecasts from MET Norway</h2>
+  <p>Weather widgets get their forecasts from MET Norway, the Norwegian Meteorological Institute, straight from your device. We never receive the request or the answer.</p>
+  <ul>
+    <li><strong>What is sent.</strong> The place's latitude and longitude, rounded to about a kilometre, and the app's name and version, which MET Norway's terms require. As with any internet request, your device's IP address reaches their servers. No account, identifier or anything else about you is sent.</li>
+    <li><strong>How often.</strong> Only while a weather widget is on screen, and no more often than the forecast changes, usually about once every half hour. Each answer is kept on the device until it expires.</li>
+    <li><strong>Finding a place by name.</strong> Searching for a town, and naming the town where you are, uses your phone's own geocoding service (on most phones Google's, under Google's privacy policy), which receives what you type, or the rounded location.</li>
+    <li><strong>Their terms.</strong> MET Norway's own privacy terms govern what their servers keep. The forecasts are theirs, used under the Creative Commons Attribution 4.0 licence.</li>
+  </ul>
+
   <h2>Two more things handled by others, not by us</h2>
   <ul>
     <li><strong>Widgets.</strong> The launcher can host widgets belonging to other apps. Those widgets are the other app's code, running under that app's own privacy policy — not this one.</li>
@@ -94,7 +112,7 @@
   </ul>
 
   <h2>Data we collect</h2>
-  <p>None, beyond the order details Google Play provides if you subscribe (see Morph Premium above). There is no server, no account, no identifier and no telemetry of our own. Nothing is shared or sold.</p>
+  <p>None, beyond the order details Google Play provides if you subscribe (see Morph Premium above). There is no server, no account, no identifier and no telemetry of our own. The weather request goes from your device to MET Norway and never through us. Nothing is shared or sold.</p>
 
   <h2>Children</h2>
   <p>The app is not directed at children and collects no personal information from anyone, of any age.</p>
@@ -105,7 +123,7 @@
   <h2>Contact</h2>
   <p>Questions about this policy: <a href="mailto:inkspirestudio.support@gmail.com">inkspirestudio.support@gmail.com</a></p>
 
-  <footer>Morph Launcher · Last updated 23 September 2026</footer>
+  <footer>Morph Launcher · Last updated 25 September 2026</footer>
 </main>
 </body>
 </html>
